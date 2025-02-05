@@ -7,10 +7,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>ヘッダー1</h1>
+    <p>本文1ほんぶん1ホンブン1</p>
+    <h2>ヘッダー2</h2>
+    <p>本文2ほんぶん2ホンブン2</p>
+    <h3>ヘッダー3</h3>
+    <p>本文3ほんぶん3ホンブン3</p>
+    <hr>
+
+    <p id="para">初期テキスト</p>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector('#para').textContent = '変更後のテキスト';
+        }, 3000);
+        //document.querySelector('#para').textContent = '変更後のテキスト';
+    </script>
+
+
+    <div class="box"></div>
+    
+    <script>
+        setTimeout(() => {
+            const box = document.querySelector(".box");
+
+            box.style.backgroundColor = "lightblue";
+            box.style.width = "100px";
+            box.style.height = "100px";
+        }, 3000);
+        //document.querySelector('#para').textContent = '変更後のテキスト';
+    </script>
+
+
+    <button>クリック me!</button>
+    <script>
+    const button = document.querySelector("button");
+    if (button) {
+      button.addEventListener("click", () => {
+        alert("ボタンがクリックされました！");
+      });
+    }
+    </script>
+
+
+    <img src="https://placebear.com/200/300" alt="画像1" data-id="1">
+    <script>
+    const image = document.querySelector('img');
+    image.addEventListener("click", () => {
+        image.src = "https://placebear.com/400/300"; // src 属性を変更
+    image.alt = "画像2"; // alt 属性を変更
+      });
+
+    </script>
+
+
+
     <h1>Simple Web App with Express.js</h1>
     <button id="fetchMessage">Get Message</button>
     <p id="message"></p>
 
-    <script src="script.js"></script>
+    <!-- <form class="user-form">
+        <input type="radio" name="user" value="1"/>
+        <label for="user1">User ID: 1</label><br>
+        
+        <input type="radio" name="user" value="2"/>
+        <label for="user2">User ID: 2</label><br>
+        
+        <input type="radio" name="user" value="3"/>
+        <label for="user3">User ID: 3</label><br>
+    </form> -->
+      
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
